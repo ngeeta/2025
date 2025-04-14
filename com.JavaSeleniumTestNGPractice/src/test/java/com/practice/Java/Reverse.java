@@ -26,17 +26,14 @@ public class Reverse {
 
 	public void revInSamePlace() {
 		String s = "My Name Is Geeta";
-		System.out.println(s+"\n");
+		System.out.println(s);
+		String []a=s.split("\\s");
 		String rev="";
-		String []arr=s.split("\\s");
-		for(int i=0;i<arr.length;i++) {
-			for(int j=arr[i].length()-1;j>=0;j--) {
-				rev=rev+arr[i].charAt(j);
-			}
-			rev=rev+" ";
-		}
-		System.out.println(rev);
-		
+		for(int i=0;i<a.length;i++) {
+			for(int j=a[i].length()-1;j>=0;j--) {
+				rev=rev+a[i].charAt(j);
+			}rev=rev +" ";
+		}System.out.println(rev);
 	}
 
 	public static void main(String[] args) {

@@ -5,27 +5,27 @@ import java.util.Scanner;
 public class PrimeNo {
 
 	public void primeNum() {
+		int a = 16;
+		int count = 0;
 
-		int a = 19;
-		int count=0;
 		if (a <= 1) {
-		      System.out.println("The number is not prime");
-		      return;
-		    }
-		for (int i = 1; i <= a/2; i++) {
+			System.out.println("no should be greater that 2");
+		}
+		for (int i = 1; i <= a / 2; i++) {
 			if (a % i == 0) {
 				count++;
 			}
+		}
 
+		if (count > 1) {
+			System.out.println(a + " is not prime");
+		} else {
+			System.out.println(a + " is prime");
+		}
+	}
 
-		}			if (count > 1) {
-	        System.out.println(a+ " The number is not prime");
-	    }
-	    else {
-	      System.out.println(a +" The number is prime");
-	    }
+	public void primeNoFromArr() {
 
-		
 	}
 
 	public void primeBetweenTwoNo() {
@@ -53,6 +53,7 @@ public class PrimeNo {
 		PrimeNo p = new PrimeNo();
 		p.primeNum();
 		p.primeBetweenTwoNo();
+		p.primeNoFromArr();
 
 	}
 }

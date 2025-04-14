@@ -15,10 +15,26 @@ map.put(3, "India");
 map.put(1, "IND");
 System.out.println(map);
 
+
+
+for(Integer i: map.keySet()) {
+	System.out.println(i +" : "+map.get(i));
+	}
+System.out.println("-----------");
+
+for(String s:map.values()) {
+System.out.println(s);	
+}
+System.out.println("-----------");
 Iterator itr=map.entrySet().iterator();
 while(itr.hasNext()) {
 	System.out.println(itr.next());
 }
-	}
-
+for(int i = 1; i <= 5; i++) {
+	 if(i == 4) {
+	 break;
+	 }
+	 System.out.print(i + " ");
+	 }
+}
 }
