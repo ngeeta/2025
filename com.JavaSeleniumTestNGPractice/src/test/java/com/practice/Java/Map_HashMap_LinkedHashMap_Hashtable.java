@@ -16,7 +16,18 @@ public class Map_HashMap_LinkedHashMap_Hashtable {
 		System.out.println(capital);
 		System.out.println(capital.keySet());
 		System.out.println(capital.values());
-System.out.println(capital.keySet() +" : "+capital.values());
+		for(String s:capital.keySet()) {
+			System.out.println(s+" :: "+capital.get(s));
+		}
+		Map<Integer,String> map=new HashMap<Integer,String>();
+		map.put(1, "India");
+		map.put(2, "US");
+		map.put(3, "India");
+		map.put(1, "IND");
+		System.out.println(map);
+		for(Integer s:map.keySet()) {
+			System.out.println(s+" "+map.get(s));
+		}
 	}
 
 }

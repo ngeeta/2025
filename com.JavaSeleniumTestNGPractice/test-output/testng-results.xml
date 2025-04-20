@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-14T22:26:10 IST" name="Default suite" finished-at="2025-04-14T22:26:14 IST" duration-ms="3821">
+  <suite started-at="2025-04-20T14:44:51 IST" name="Default suite" finished-at="2025-04-20T14:44:51 IST" duration-ms="67">
     <groups>
     </groups>
-    <test started-at="2025-04-14T22:26:10 IST" name="Default test" finished-at="2025-04-14T22:26:14 IST" duration-ms="3821">
-      <class name="com.practice.TestNG.Assertions">
-        <test-method signature="assertion1()[pri:0, instance:com.practice.TestNG.Assertions@49438269]" started-at="2025-04-14T22:26:10 IST" name="assertion1" finished-at="2025-04-14T22:26:14 IST" duration-ms="3775" status="PASS">
+    <test started-at="2025-04-20T14:44:51 IST" name="Default test" finished-at="2025-04-20T14:44:51 IST" duration-ms="67">
+      <class name="com.practice.java8.OddEven">
+        <test-method signature="Odd()[pri:0, instance:com.practice.java8.OddEven@61322f9d]" started-at="2025-04-20T14:44:51 IST" name="Odd" finished-at="2025-04-20T14:44:51 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- assertion1 -->
-      </class> <!-- com.practice.TestNG.Assertions -->
+        </test-method> <!-- Odd -->
+        <test-method signature="charCount()[pri:0, instance:com.practice.java8.OddEven@61322f9d]" started-at="2025-04-20T14:44:51 IST" name="charCount" finished-at="2025-04-20T14:44:51 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- charCount -->
+      </class> <!-- com.practice.java8.OddEven -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
