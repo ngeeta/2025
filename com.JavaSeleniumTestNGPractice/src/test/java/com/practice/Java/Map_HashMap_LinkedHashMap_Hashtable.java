@@ -28,6 +28,19 @@ public class Map_HashMap_LinkedHashMap_Hashtable {
 		for(Integer s:map.keySet()) {
 			System.out.println(s+" "+map.get(s));
 		}
+		Map<String, String> test=new HashMap<String, String>();
+		
+		test.put("", "test");
+		test.put("", "tes2");
+		test.put("1", "");
+		test.put("2", "");
+		
+		Iterator tr=test.entrySet().iterator();
+		while(tr.hasNext()) {
+			System.out.println(tr.next());
+		}
+		
+
 	}
 
 }

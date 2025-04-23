@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class Grouping {
 	static {
-		System.out.println("Create testng.xml is require\n add-><groups>\r\n"
+		System.out.println("testng.xml is mandatory groups tag in testng\n add-><groups>"
 				+ "\r\n"
 				+ "  <run> <include name=\"s.*\"></include>");
 	}

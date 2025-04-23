@@ -4,7 +4,8 @@
   <test name="Parallel Test">
     <classes>
       <class name="com.practice.TestNG.ChromeTest"/>
-            <class name="com.practice.TestNG.FireFoxTest"/>
+       <class name="com.practice.TestNG.FireFoxTest"/>
+       <class name="com.practice.TestNG.EdgeTest"/>
 
     </classes>
   </test> <!-- Test -->

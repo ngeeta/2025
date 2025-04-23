@@ -3,7 +3,11 @@ package com.practice.TestNG;
 import org.testng.annotations.*;
 
 public class ParallelTestScript {
+static {
+	System.out.println("<suite name = Parallel Test parallel = methods>");
+	System.out.println("<suite name = Parallel Test parallel = test>");
 
+}
 	@Test
 	public void add() {
 		int sum=a()+b();
