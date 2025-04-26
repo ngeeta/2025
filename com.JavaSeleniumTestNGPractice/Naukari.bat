@@ -1,0 +1,1 @@
+mvn compile exec:java -Dexec.mainClass="com.practice.Java.SingleNaukariProfileUpdate"

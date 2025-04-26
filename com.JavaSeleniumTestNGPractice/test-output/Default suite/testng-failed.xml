@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.practice.RestAssured.HTTPRequests">
+      <class name="com.practice.TestNG.ITestListenerProg">
         <methods>
-          <include name="createUser"/>
+          <include name="testMethod2"/>
+          <include name="testMethod3"/>
         </methods>
-      </class> <!-- com.practice.RestAssured.HTTPRequests -->
+      </class> <!-- com.practice.TestNG.ITestListenerProg -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
