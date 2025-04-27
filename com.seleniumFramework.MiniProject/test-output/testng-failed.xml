@@ -11,6 +11,7 @@
         <methods>
           <include name="sampleMethodToForEnteringCred"/>
           <include name="startReporter"/>
+          <include name="fileReader"/>
           <include name="afterTest"/>
           <include name="setUpBrowser"/>
           <include name="afterMethod"/>

@@ -13,7 +13,9 @@ public class ElementFetch {
 public WebElement getWebElement(String identifierType,String identifierValue) {
 	switch (identifierType) {
 	case "XPATH":
+		System.out.println("Xpath : : ");
 		return BaseTest.driver.findElement(By.xpath(identifierValue));
+		
 	
 	case "CSS":
 		return BaseTest.driver.findElement(By.cssSelector(identifierValue));

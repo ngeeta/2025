@@ -1,11 +1,11 @@
-package Pages;
+package PagesObject;
 
 import org.testng.Assert;
 
-import PageObject.LoginPageElements;
+import Base.BaseTest;
 import Utils.ElementFetch;
 
-public class LoginPage {
+public class LoginPage extends BaseTest {
 
 	ElementFetch el=new ElementFetch();
 	
@@ -13,14 +13,14 @@ public class LoginPage {
 		System.out.println("Title of Parent Page "+el.getTitle());
 		el.windowSwitch();
 		System.out.println("Title of Child Page "+el.getTitle());
-		Assert.assertEquals(el.getTitle(), "Cogmento CRM1");
+		Assert.assertEquals(el.getTitle(), "Cogmento CRM");
 
 
 	}
 	
 	public void enterCredentials() {
-		el.getWebElement("NAME", LoginPageElements.usernameName).sendKeys("geeta@gmail.com");
-		el.getWebElement("NAME", LoginPageElements.passwordName).sendKeys("12345");
+		el.getWebElement("NAME",property.getProperty("usernameName")).sendKeys("geeta@gmail.com");
+		el.getWebElement("NAME", property.getProperty("passwordName")).sendKeys("12345");
 
 	}
 	

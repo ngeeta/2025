@@ -1,210 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="4" failed="1" skipped="1">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-25T12:27:20 IST" name="Suite" finished-at="2025-04-25T12:27:20 IST" duration-ms="107">
+  <suite started-at="2025-04-27T11:20:32 IST" name="Default suite" finished-at="2025-04-27T11:20:32 IST" duration-ms="60">
     <groups>
     </groups>
-    <test started-at="2025-04-25T12:27:20 IST" name="Test" finished-at="2025-04-25T12:27:20 IST" duration-ms="107">
-      <class name="com.practice.TestNG.ITestListenerProg">
-        <test-method signature="testMethod1()[pri:0, instance:com.practice.TestNG.ITestListenerProg@6ad82709]" started-at="2025-04-25T12:27:20 IST" name="testMethod1" finished-at="2025-04-25T12:27:20 IST" duration-ms="12" status="PASS">
+    <test started-at="2025-04-27T11:20:32 IST" name="Default test" finished-at="2025-04-27T11:20:32 IST" duration-ms="60">
+      <class name="com.practice.TestNG.TestNGAnnotation">
+        <test-method is-config="true" signature="h()[pri:0, instance:com.practice.TestNG.TestNGAnnotation@424e1977]" started-at="2025-04-27T11:20:32 IST" name="h" finished-at="2025-04-27T11:20:32 IST" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethod1 -->
-        <test-method signature="testMethod2()[pri:0, instance:com.practice.TestNG.ITestListenerProg@6ad82709]" started-at="2025-04-25T12:27:20 IST" name="testMethod2" finished-at="2025-04-25T12:27:20 IST" duration-ms="8" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [11] but found [10]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [11] but found [10]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:1431)
-at org.testng.Assert.assertEquals(Assert.java:1395)
-at org.testng.Assert.assertEquals(Assert.java:1441)
-at com.practice.TestNG.ITestListenerProg.testMethod2(ITestListenerProg.java:34)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- h -->
+        <test-method is-config="true" signature="f()[pri:0, instance:com.practice.TestNG.TestNGAnnotation@424e1977]" started-at="2025-04-27T11:20:32 IST" name="f" finished-at="2025-04-27T11:20:32 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethod2 -->
-        <test-method signature="testMethod3()[pri:0, instance:com.practice.TestNG.ITestListenerProg@6ad82709]" started-at="2025-04-25T12:27:20 IST" name="testMethod3" finished-at="2025-04-25T12:27:20 IST" duration-ms="4" status="SKIP">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Skipping this test case.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping this test case.
-at com.practice.TestNG.ITestListenerProg.testMethod3(ITestListenerProg.java:41)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
+        </test-method> <!-- f -->
+        <test-method is-config="true" signature="f1()[pri:0, instance:com.practice.TestNG.TestNGAnnotation@424e1977]" started-at="2025-04-27T11:20:32 IST" name="f1" finished-at="2025-04-27T11:20:32 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethod3 -->
-        <test-method signature="testMethod4()[pri:0, instance:com.practice.TestNG.ITestListenerProg@6ad82709]" started-at="2025-04-25T12:27:20 IST" name="testMethod4" finished-at="2025-04-25T12:27:20 IST" duration-ms="3" status="SUCCESS_PERCENTAGE_FAILURE">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [100] but found [1]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [100] but found [1]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:1431)
-at org.testng.Assert.assertEquals(Assert.java:1395)
-at org.testng.Assert.assertEquals(Assert.java:1441)
-at com.practice.TestNG.ITestListenerProg.testMethod4(ITestListenerProg.java:52)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- f1 -->
+        <test-method is-config="true" signature="d()[pri:0, instance:com.practice.TestNG.TestNGAnnotation@424e1977]" started-at="2025-04-27T11:20:32 IST" name="d" finished-at="2025-04-27T11:20:32 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethod4 -->
-        <test-method signature="testMethod4()[pri:0, instance:com.practice.TestNG.ITestListenerProg@6ad82709]" started-at="2025-04-25T12:27:20 IST" name="testMethod4" finished-at="2025-04-25T12:27:20 IST" duration-ms="2" status="SUCCESS_PERCENTAGE_FAILURE">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [100] but found [2]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [100] but found [2]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:1431)
-at org.testng.Assert.assertEquals(Assert.java:1395)
-at org.testng.Assert.assertEquals(Assert.java:1441)
-at com.practice.TestNG.ITestListenerProg.testMethod4(ITestListenerProg.java:52)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- d -->
+        <test-method is-config="true" signature="b()[pri:0, instance:com.practice.TestNG.TestNGAnnotation@424e1977]" started-at="2025-04-27T11:20:32 IST" name="b" finished-at="2025-04-27T11:20:32 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethod4 -->
-        <test-method signature="testMethod4()[pri:0, instance:com.practice.TestNG.ITestListenerProg@6ad82709]" started-at="2025-04-25T12:27:20 IST" name="testMethod4" finished-at="2025-04-25T12:27:20 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- b -->
+        <test-method signature="aa()[pri:0, instance:com.practice.TestNG.TestNGAnnotation@424e1977]" started-at="2025-04-27T11:20:32 IST" name="aa" finished-at="2025-04-27T11:20:32 IST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethod4 -->
-        <test-method signature="testMethod4()[pri:0, instance:com.practice.TestNG.ITestListenerProg@6ad82709]" started-at="2025-04-25T12:27:20 IST" name="testMethod4" finished-at="2025-04-25T12:27:20 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- aa -->
+        <test-method is-config="true" signature="c()[pri:0, instance:com.practice.TestNG.TestNGAnnotation@424e1977]" started-at="2025-04-27T11:20:32 IST" name="c" finished-at="2025-04-27T11:20:32 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethod4 -->
-        <test-method signature="testMethod4()[pri:0, instance:com.practice.TestNG.ITestListenerProg@6ad82709]" started-at="2025-04-25T12:27:20 IST" name="testMethod4" finished-at="2025-04-25T12:27:20 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- c -->
+        <test-method is-config="true" signature="e()[pri:0, instance:com.practice.TestNG.TestNGAnnotation@424e1977]" started-at="2025-04-27T11:20:32 IST" name="e" finished-at="2025-04-27T11:20:32 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethod4 -->
-      </class> <!-- com.practice.TestNG.ITestListenerProg -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- e -->
+        <test-method is-config="true" signature="g()[pri:0, instance:com.practice.TestNG.TestNGAnnotation@424e1977]" started-at="2025-04-27T11:20:32 IST" name="g" finished-at="2025-04-27T11:20:32 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- g -->
+        <test-method is-config="true" signature="g1()[pri:0, instance:com.practice.TestNG.TestNGAnnotation@424e1977]" started-at="2025-04-27T11:20:32 IST" name="g1" finished-at="2025-04-27T11:20:32 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- g1 -->
+        <test-method is-config="true" signature="i()[pri:0, instance:com.practice.TestNG.TestNGAnnotation@424e1977]" started-at="2025-04-27T11:20:32 IST" name="i" finished-at="2025-04-27T11:20:32 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- i -->
+      </class> <!-- com.practice.TestNG.TestNGAnnotation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

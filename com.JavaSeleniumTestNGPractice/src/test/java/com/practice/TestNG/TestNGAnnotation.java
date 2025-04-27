@@ -34,11 +34,19 @@ public void e() {
 }
 @BeforeTest
 public void f() {
-	System.out.println("From @BeforeTest");
+	System.out.println("From @BeforeTest1");
+}
+@BeforeTest
+public void f1() {
+	System.out.println("From @BeforeTest2");
 }
 @AfterTest
 public void g() {
-	System.out.println("From @AfterTest");
+	System.out.println("From @AfterTest1");
+}
+@AfterTest
+public void g1() {
+	System.out.println("From @AfterTest2");
 }
 @BeforeSuite
 public void h() {
@@ -46,7 +54,7 @@ public void h() {
 }
 @AfterSuite
 public void i() {
-	System.out.println("From @BeforeSuite");
+	System.out.println("From @AfterSuite");
 }
 
 }

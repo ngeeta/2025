@@ -11,8 +11,11 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import Utils.Constants;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.time.Duration;
+import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -26,7 +29,11 @@ public class BaseTest {
 	public ExtentReports extent;
 	public ExtentTest logger;
 	public static WebDriver driver;
+	public static FileInputStream fs;
+	public static Properties property;
+	
 
+		
 	@BeforeTest
 	public void startReporter() {
 
@@ -45,11 +52,19 @@ public class BaseTest {
 		//extentSparkReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
 
 	}
+	@BeforeTest
+	public void fileReader() throws IOException {
+		
 
+	}
 	@BeforeMethod
 	@Parameters("browser")
-	public void setUpBrowser(String browser,Method method) {
+	public void setUpBrowser(String browser, Method method) throws IOException {
 logger=extent.createTest(method.getName());
+FileInputStream file=new FileInputStream("src/test/resources/ConfigFiles/locators.properties");
+property=new Properties();
+property.load(file);
+System.out.println("from base "+property.getProperty("signInButton"));
 		if (browser.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("edge")) {
