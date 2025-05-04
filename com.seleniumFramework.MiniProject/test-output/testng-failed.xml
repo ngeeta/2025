@@ -9,10 +9,10 @@
     <classes>
       <class name="QA.test.TestSample">
         <methods>
+          <include name="FileLoad"/>
           <include name="sampleMethodToForEnteringCred"/>
-          <include name="startReporter"/>
-          <include name="fileReader"/>
           <include name="afterTest"/>
+          <include name="startReporter"/>
           <include name="setUpBrowser"/>
           <include name="afterMethod"/>
         </methods>

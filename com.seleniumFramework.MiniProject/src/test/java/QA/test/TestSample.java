@@ -4,15 +4,16 @@ import Base.BaseTest;
 import PagesObject.HomePage;
 import PagesObject.LoginPage;
 import Utils.ElementFetch;
+import Utils.SuitListener;
+
 import org.testng.annotations.*;
-import org.testng.log4testng.Logger;
 
 public class TestSample extends BaseTest{
 ElementFetch el=new ElementFetch();
 HomePage hm=new HomePage();
 LoginPage lp=new LoginPage();
 
-@Test
+@Test (retryAnalyzer = SuitListener.class)
 public void sampleMethodToForEnteringCred() throws InterruptedException {
 	logger.info("Sign in into Login Page");
 	hm.signInButton();

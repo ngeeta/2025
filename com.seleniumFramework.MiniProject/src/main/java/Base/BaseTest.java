@@ -8,8 +8,6 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import Utils.Constants;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -31,73 +29,80 @@ public class BaseTest {
 	public static WebDriver driver;
 	public static FileInputStream fs;
 	public static Properties property;
-	
 
-		
 	@BeforeTest
 	public void startReporter() {
 
-		sparkReporter = new ExtentSparkReporter(
-				System.getProperty("user.dir") + File.separator+"reports"+File.separator+"SDETADDAextentReport.html");
+		sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + File.separator + "reports"
+				+ File.separator + "SDETADDAextentReport.html");
 		extent = new ExtentReports();
 		extent.attachReporter(sparkReporter);
-		sparkReporter.config().setTheme(Theme.DARK);
+		sparkReporter.config().setTheme(Theme.STANDARD);
 
-		extent.setSystemInfo("HostName", "RHEL8");
-		extent.setSystemInfo("UserName", "root");
+		// extent.setSystemInfo("HostName", "RHEL8");
+		// extent.setSystemInfo("UserName", "root");
 		// configuration items to change the look and feel
 		// add content, manage tests etc
 		sparkReporter.config().setDocumentTitle("Automation Report");
-		sparkReporter.config().setReportName("Automation test result be SDET ADDA");
-		//extentSparkReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
+		sparkReporter.config().setReportName("Automation test result Of Mini Project");
+		//sparkReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
 
 	}
-	@BeforeTest
-	public void fileReader() throws IOException {
-		
 
+	@BeforeMethod
+	public void FileLoad(Method method) throws IOException {
+		logger = extent.createTest(method.getName());
+		fs = new FileInputStream("src/test/resources/ConfigFiles/locators.properties");
+		property = new Properties();
+		property.load(fs);
+		System.out.println("from base " + property.getProperty("signInButton"));
 	}
+
 	@BeforeMethod
 	@Parameters("browser")
 	public void setUpBrowser(String browser, Method method) throws IOException {
-logger=extent.createTest(method.getName());
-FileInputStream file=new FileInputStream("src/test/resources/ConfigFiles/locators.properties");
-property=new Properties();
-property.load(file);
-System.out.println("from base "+property.getProperty("signInButton"));
+		logger = extent.createTest(method.getName());
 		if (browser.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
+			logger.info("From Chrome");
 		} else if (browser.equalsIgnoreCase("edge")) {
 			driver = new EdgeDriver();
+			logger.info("From Edge");
 
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
+			logger.info("From Firefox");
 
 		} else {
 			throw new IllegalArgumentException("Unsupported Browser : " + browser);
 
 		}
 		driver.manage().window().maximize();
-		driver.get(Constants.url);
+		driver.get(property.getProperty("url"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
 	}
+
 	@AfterMethod
 	public void afterMethod(ITestResult result) {
-		if(result.getStatus()==ITestResult.FAILURE) {
-			logger.log(Status.FAIL, MarkupHelper.createLabel(result.getName()+ " - Test case failed ",ExtentColor.RED));
-			logger.log(Status.FAIL, MarkupHelper.createLabel(result.getThrowable()+ " - Test case failed ",ExtentColor.RED));
+		if (result.getStatus() == ITestResult.FAILURE) {
+			logger.log(Status.FAIL,
+					MarkupHelper.createLabel(result.getName() + " - Test case failed ", ExtentColor.RED));
+			logger.log(Status.FAIL,
+					MarkupHelper.createLabel(result.getThrowable() + " - Test case failed ", ExtentColor.RED));
 
-		}
-		else if(result.getStatus()==ITestResult.SKIP) {
-			logger.log(Status.SKIP, MarkupHelper.createLabel(result.getName()+ " - Test case skipped ",ExtentColor.ORANGE));
+		} else if (result.getStatus() == ITestResult.SKIP) {
+			logger.log(Status.SKIP,
+					MarkupHelper.createLabel(result.getName() + " - Test case skipped ", ExtentColor.ORANGE));
 
-		}else if(result.getStatus()==ITestResult.SUCCESS) {
-			logger.log(Status.PASS, MarkupHelper.createLabel(result.getName()+ " - Test case Pass ",ExtentColor.GREEN));
+		} else if (result.getStatus() == ITestResult.SUCCESS) {
+			logger.log(Status.PASS,
+					MarkupHelper.createLabel(result.getName() + " - Test case Pass ", ExtentColor.GREEN));
 
 		}
 		driver.quit();
 	}
+
 	@AfterMethod
 	public void afterTest() {
 		extent.flush();

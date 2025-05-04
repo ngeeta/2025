@@ -9,6 +9,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.IAnnotationTransformer;
+import org.testng.IRetryAnalyzer;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.annotations.IConfigurationAnnotation;
@@ -17,7 +18,7 @@ import org.testng.annotations.ITestAnnotation;
 import Base.BaseTest;
 
 
-public class SuitListener implements ITestListener,IAnnotationTransformer {
+public class SuitListener implements ITestListener,IAnnotationTransformer,IRetryAnalyzer {
 
 	@Override
 	public void onTestFailure(ITestResult result) {
@@ -32,9 +33,19 @@ public class SuitListener implements ITestListener,IAnnotationTransformer {
 		}
 		
 	}
-	
-	@Override
-	public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor,
-			Method testMethod) {
-		annotation.setRetryAnalyzer(RetryAnalyser.class);}
+	int count =0;
+	int retryCount=2;
+		@Override
+		public boolean retry(ITestResult result) {
+			while(count<retryCount) {
+				count++;
+				return true;
+			}
+			return false;
+		}
 }
+/*
+ * @Override public void transform(ITestAnnotation annotation, Class testClass,
+ * Constructor testConstructor, Method testMethod) {
+ * annotation.setRetryAnalyzer(RetryAnalyser.class);} }
+ */

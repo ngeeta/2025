@@ -4,7 +4,8 @@
 <listeners><listener class-name="Utils.SuitListener"></listener></listeners>
 <parameter name="browser" value="chrome"></parameter>
   <test thread-count="5" name="Test">
-  <classes>
-  <class name="QA.test.TestSample"></class></classes>
+    <classes>
+      <class name="QA.test.TestSample"/>
+    </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
