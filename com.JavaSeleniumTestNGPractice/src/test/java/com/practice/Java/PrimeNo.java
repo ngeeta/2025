@@ -5,21 +5,22 @@ import java.util.Scanner;
 public class PrimeNo {
 static String primeOrNot() {
 	
-	int a=5;
-	int count = 0;
+	int a=6;
+	int count=0;
 	
 	for(int i=1;i<=a/2;i++) {
 		if(a%i==0) {
 			count++;
+			}
+		
 		}
-	}
 	if(count>1) {
-		System.out.println(a+" is not prime");
+		System.out.println(a+" : is not prime");
 	}
 	else {
-		System.out.println(a+" is prime");
-
+		System.out.println(a +" : is prime No");
 	}
+	
 	return "";
 	
 }
@@ -33,8 +34,9 @@ static String primeOrNot() {
 					count++;
 				}
 			}
-			if(count==2)
-				System.out.print(i+ ",");
+			if(count==2) {
+				System.out.println(i);
+			}
 		}
 	}
 

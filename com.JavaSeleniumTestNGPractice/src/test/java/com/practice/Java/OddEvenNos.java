@@ -18,11 +18,14 @@ String rev="";
 		for(int j=a3.get(i).length()-1;j>=0;j--) {
 			rev=rev+a3.get(i).charAt(j);
 		}
-		rev=rev+" ";
+		rev=rev+ " ";
 	}
 System.out.println(rev);
-
 }
+
+
+
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		oddEvAL();

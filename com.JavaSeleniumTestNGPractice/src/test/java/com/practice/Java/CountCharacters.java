@@ -7,7 +7,9 @@ public class CountCharacters {
 		String a="Hello123.W4";
 System.out.println("string Length = "+a.length());
 String b="Geeta.Borkar.,Geeta.Borkar";
-String newB=b.replaceAll("[.\\s,]+", "");
+String newB=b.replaceAll("[.\\s,]", "");
+System.out.println("B: string Length = "+newB.length());
+
 int count =0;
 for(int i=0;i<newB.length();i++) {
 	if(newB.charAt(i)!=' ') {

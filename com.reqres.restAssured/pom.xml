@@ -6,7 +6,11 @@
   <name>com.reqres.restAssured</name>
   <description>com.reqres.restAssured</description>
   <dependencies>
-		
+		<dependency>
+    <groupId>org.json</groupId>
+    <artifactId>json</artifactId>
+    <version>20250107</version>
+</dependency>
 		<!--  https://mvnrepository.com/artifact/org.testng/testng  -->
 		<dependency>
 			<groupId>org.testng</groupId>
